@@ -1,0 +1,41 @@
+/*
+ * Copyright (c) 2020. Saumya Jain
+ */
+
+:root {
+    '--black': #000000;
+    '--white': #ffffff;
+    '--ultimate-green': #000A0A;
+}
+
+.App {
+    text-align: center;
+    /*background: url("./Images/Illustration1.png") no-repeat;*/
+    background-image: url("./Images/Illustration2.png"), url("./Images/Illustration1.png"), url("./Images/Illustration3.png"), url("./Images/Illustration4.png"), url("./Images/Illustration5.png");
+    background-position: 130% -15%, -15% 120%, 15% 40%, right bottom, 90% 75%;
+    background-repeat: no-repeat, no-repeat;
+    background-origin: content-box;
+    background-attachment: fixed;
+    padding: 4vh 14vw;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+
+/*
+*
+*
+*
+                SEMANTIC UI OVERRIDES
+*
+*
+*
+*/
+
+.ui.cards {
+    justify-content: center !important;
+}
