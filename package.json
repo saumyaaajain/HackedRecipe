@@ -6,13 +6,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "imask": "^6.0.5",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-credit-card-input": "^1.1.5",
+    "react-credit-cards": "^0.8.3",
     "react-dom": "^16.13.1",
+    "react-imask": "^6.0.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^1.1.0"
+    "semantic-ui-react": "^1.1.0",
+    "styled-components": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -15,6 +15,7 @@ import RecipeDetails from "./Components/RecipeDetails";
 import Header from "./Components/Header";
 import './App.css';
 import './Components/RecipeDetails.css';
+import {PaymentPage} from "./Components/PaymentPage";
 
 function App() {
     return (
@@ -25,7 +26,10 @@ function App() {
                     <Route exact path="/">
                         <LandingPage/>
                     </Route>
-                    <Route path="/:id">
+                    <Route path="/pay" exact={true}>
+                        <PaymentPage />
+                    </Route>
+                    <Route path="/:id" exact={true}>
                         <RecipeDetails/>
                     </Route>
                 </Switch>

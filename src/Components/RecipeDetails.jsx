@@ -3,7 +3,7 @@
  */
 
 import React, {useEffect, useState} from 'react'
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {capitalize, getRecipes} from "../utils";
 import {Icon} from "semantic-ui-react";
 import LazyLoadImage from "../Wrapper/LazyLoadImage";
@@ -37,10 +37,10 @@ function RecipeDetails(props) {
                     {category && <li>{capitalize(category)}</li>}
                 </ul>
                 <div className="control">
-                    <button className="btn">
+                    <Link to="/pay" className="btn">
                         <span className="price">$ {price}</span>
                         <Icon name='money' />
-                    </button>
+                    </Link>
                 </div>
             </div>
             <div className="product-image">
