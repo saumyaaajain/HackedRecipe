@@ -17,13 +17,20 @@ function DetailsModal({id}) {
             open={open}
             trigger={<Button color='teal'>View More</Button>}
         >
-            <Modal.Header>Choose Your Favourite Dish</Modal.Header>
+            <Modal.Header>
+                Choose Your Favourite Dish
+            </Modal.Header>
             <Modal.Content>
-                <RecipeDetails id={id} />
+                <RecipeDetails
+                    id={id}
+                />
             </Modal.Content>
             <Modal.Actions>
-                <Button color='black' onClick={() => setOpen(false)}>
-                    Close
+                <Button
+                    color='black'
+                    onClick={() => setOpen(false)}
+                >
+                        Close
                 </Button>
             </Modal.Actions>
         </Modal>

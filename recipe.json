@@ -1,0 +1,4 @@
+[
+  {"id":"1", "name": "Pizza", "label":"HOT", "description":"description",
+    "category":"category", "price": "Rs. 20", "image":"path/to/image"}
+]

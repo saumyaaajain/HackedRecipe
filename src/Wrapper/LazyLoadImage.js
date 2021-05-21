@@ -30,8 +30,15 @@ export default class LazyImage extends React.Component {
         const { size } = this.props
         if (!this.state.show) {
             return (
-                <Visibility fireOnMount as="span" onOnScreen={this.showImage}>
-                    <Loader active inline="centered" size={size} />
+                <Visibility
+                    fireOnMount as="span"
+                    onOnScreen={this.showImage}
+                >
+                    <Loader
+                        active
+                        inline="centered"
+                        size={size}
+                    />
                 </Visibility>
             )
         }

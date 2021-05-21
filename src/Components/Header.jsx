@@ -8,12 +8,21 @@ import React from "react";
 
 const DefaultHeader = () => (
     <Segment clearing>
-        <Link to="/">
-            <Header as='h2' floated='left'>
-                <Icon name='utensil spoon'/>
+        <Link
+            to="/"
+        >
+            <Header
+                as='h2'
+                floated='left'
+            >
+                <Icon
+                    name='utensil spoon'
+                />
                 <Header.Content>
                     Sam's Pizzeria
-                    <Header.Subheader>Select your space delicacy</Header.Subheader>
+                    <Header.Subheader>
+                        Select your space delicacy
+                    </Header.Subheader>
                 </Header.Content>
             </Header>
         </Link>

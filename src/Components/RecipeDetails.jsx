@@ -10,7 +10,9 @@ import LazyLoadImage from "../Wrapper/LazyLoadImage";
 
 async function getRecipe(currentId) {
     let recipes = await getRecipes().then((data) => data)
-    return recipes.filter(({id}) => Number(id) === Number(currentId))[0]
+    return recipes.filter(
+        ({id}) => Number(id) === Number(currentId)
+    )[0];
 }
 
 function RecipeDetails(props) {
@@ -18,33 +20,58 @@ function RecipeDetails(props) {
     if(props.id){
         id = props.id
     }
-    const [currentRecipe, setcurrentRecipe] = useState({})
+    const [currentRecipe, setCurrentRecipe] = useState({})
     useEffect(() => {
         getRecipe(id).then((recipes) => {
-            setcurrentRecipe(recipes)
+            setCurrentRecipe(recipes)
         })
     }, [id])
     const {
         name, image, label, price, description, category
     } = currentRecipe
     return (
-        <div id="container">
-            <div className="product-details">
-                <h1>{name}</h1>
-                <p className="information">{description}</p>
+        <div
+            id="container"
+        >
+            <div
+                className="product-details"
+            >
+                <h1>
+                    {name}
+                </h1>
+                <div>
+                    <p>
+                        {description}
+                    </p>
+                </div>
                 <ul>
                     {label && <li>{capitalize(label)}</li>}
                     {category && <li>{capitalize(category)}</li>}
                 </ul>
-                <div className="control">
-                    <Link to="/pay" className="btn">
-                        <span className="price">$ {price}</span>
-                        <Icon name='money' />
+                <div
+                    className="control"
+                >
+                    <Link
+                        to="/pay"
+                        className="btn"
+                    >
+                        <span
+                            className="price"
+                        >
+                            {price}
+                        </span>
+                        <Icon
+                            name='money'
+                        />
                     </Link>
                 </div>
             </div>
-            <div className="product-image">
-                <LazyLoadImage src={image} />
+            <div
+                className="product-image"
+            >
+                <LazyLoadImage
+                    src={image}
+                />
             </div>
         </div>
 )
